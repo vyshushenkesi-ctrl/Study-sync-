@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#635bdb">
+<link rel="manifest" id="mf">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAWfmNhQlgAABZ+anVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQNjMnBhAAAAFlhqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3VybjpjMnBhOmVlZTU5MjQyLTJkMTktNGQ2NC05YTgzLTM4MzUyZWY5NzYxMgAAAAOTanVtYgAAAClqdW1kYzJhcwARABCAAACqADibcQNjMnBhLmFzc2VydGlvbnMAAAAAuGp1bWIAAABEanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5pbmdyZWRpZW50LnYzAAAAABhjMnNobgGsiQmtM+XnIDWcJ03//QAAAGxjYm9yo2lkYzpmb3JtYXRpaW1hZ2UvcG5namluc3RhbmNlSUR4LHhtcDppaWQ6NDFlODM1ZTAtMjlmYS00ZGQ3LThiYmYtOWVmNDMyOGMyMTY3bHJlbGF0aW9uc2hpcGhwYXJlbnRPZgAAAeJqdW1iAAAAQWp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuYWN0aW9ucy52MgAAAAAYYzJzaHRyfQrxSS79LBAyMI0m1H8AAAGZY2JvcqJnYWN0aW9uc4KiZmFjdGlvbmtjMnBhLm9wZW5lZGpwYXJhbWV0ZXJzoWtpbmdyZWRpZW50c4GiY3VybHgtc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5pbmdyZWRpZW50LnYzZGhhc2hYIKIQ0DnAbov7sBJH5X0V6gkr7XSAlZYscHYeqDnKrWfCpGZhY3Rpb254HWNvbS5hbnRocm9waWMuY2xhdWRlLnByb3ZpZGVkanBhcmFtZXRlcnOheB9jb20uYW50aHJvcGljLm9yaWdpbi1jb25maWRlbmNlZ3Vua25vd25rZGVzY3JpcHRpb254ZkNsYXVkZSBwcm92aWRlZCB0aGlzIGZpbGUgYXQgdGhlIHJlcXVlc3Qgb2YgYSB1c2VyIGFuZCBtYXkgaGF2ZSBjcmVhdGVkIG9yIG1vZGlmaWVkIHRoZSBmaWxlIGNvbnRlbnRzLm1zb2Z0d2FyZUFnZW50oWRuYW1lZkNsYXVkZXJhbGxBY3Rpb25zSW5jbHVkZWT1AAAAyGp1bWIAAABAanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5oYXNoLmRhdGEAAAAAGGMyc2hPmU8qcpViq6F1nInIKWUoAAAAgGNib3KlY2FsZ2ZzaGEyNTZjcGFkTQAAAAAAAAAAAAAAAABkaGFzaFggz2hVqV3uRRjVbWEOIaQ2IemNuP4Q5KvMFsEacoPIoXBkbmFtZW5qdW1iZiBtYW5pZmVzdGpleGNsdXNpb25zgaJlc3RhcnQYIWZsZW5ndGgZFooAAAI+anVtYgAAACdqdW1kYzJjbAARABCAAACqADibcQNjMnBhLmNsYWltLnYyAAAAAg9jYm9ypWNhbGdmc2hhMjU2aXNpZ25hdHVyZXhNc2VsZiNqdW1iZj0vYzJwYS91cm46YzJwYTplZWU1OTI0Mi0yZDE5LTRkNjQtOWE4My0zODM1MmVmOTc2MTIvYzJwYS5zaWduYXR1cmVqaW5zdGFuY2VJRHgseG1wOmlpZDoxZmJlM2ZlNC1jZGZiLTQwNjgtOWU5Zi03ZGVmMTU0NWZhYjdyY3JlYXRlZF9hc3NlcnRpb25zg6JjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggohDQOcBui/uwEkflfRXqCSvtdICVlixwdh6oOcqtZ8KiY3VybHgqc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5hY3Rpb25zLnYyZGhhc2hYIDK73yjoxIZnRQ9WUcMcLKlqgvEKnMGDlWeeJCczb8z3omN1cmx4KXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaGFzaC5kYXRhZGhhc2hYICzKrH8W14tHPAZylF1vOiX8sD6BSJT1vyhTzDAVslE7dGNsYWltX2dlbmVyYXRvcl9pbmZvo2RuYW1lb0FudGhyb3BpYyBGaWxlc2d2ZXJzaW9uZTEuMC4wa3NwZWNWZXJzaW9uZTIuNC4wAAAQOGp1bWIAAAAoanVtZGMyY3MAEQAQgAAAqgA4m3EDYzJwYS5zaWduYXR1cmUAAAAQCGNib3LShFkCEqIBJhghWQIKMIICBjCCAY2gAwIBAgIUQOWgCu7COdC+uIP6BkIFPWdVEwAwCgYIKoZIzj0EAwMwSTEXMBUGA1UEChMOQW50aHJvcGljLCBQQkMxLjAsBgNVBAMTJUFudGhyb3BpYyBDb250ZW50IENyZWRlbnRpYWxzIFJvb3QgQ0EwHhcNMjYwODA3MTg0MzU2WhcNMjgwODA2MTk0MzU2WjBEMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEpMCcGA1UEAxMgQW50aHJvcGljIENsYXVkZSBDb250ZW50IFNpZ25pbmcwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASYegpry1AYBRTVNL1CpTlbROnY3dey+UrsF9C3phYrATN3ZHf93Mo8RQN0KOUuOn19P4oWNFWe5n2/She9N7eTo1gwVjAOBgNVHQ8BAf8EBAMCB4AwFQYDVR0lBA4wDAYKKwYBBAGD6F4CATAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFM5R4gSBTmRbI/jjxM+aPpzB11zCMAoGCCqGSM49BAMDA2cAMGQCMDFzHRSeAXrSy1WOzkbhPZ6Km2wGTmZ/2gK18k8BQGXyqz88Rdrz6CTX9flAnYNVxgIwcF9c3fVhqmJKpi+UhasNUMko69cyX6STPfta3Q8EjyzDjzoyrol46FP6VFHhvUcJoWNwYWRZDZ4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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">
+<title>StudySync - Student Planner</title>
+<style>
+:root{--bg:#f3f4fb;--card:#fff;--ink:#252744;--main:#635bdb;--soft:#eeedff;--mute:#777;--line:#eee;--warn:#fff0d9;--warnink:#805000;--ok:#2e9e6b;--bad:#e55353}
+@media (prefers-color-scheme:dark){:root{--bg:#171828;--card:#222440;--ink:#e8e9ff;--soft:#2e3052;--mute:#a0a2c4;--line:#33365a;--warn:#3d3220;--warnink:#ffd99a}}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:var(--main);color:#fff;padding:24px 18px;border-radius:0 0 24px 24px}
+header h1{margin:0}header p{margin:4px 0 0}
+.hud{max-width:800px;margin:14px auto 0;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.pill{background:#ffffff26;padding:6px 12px;border-radius:20px;font-weight:bold;font-size:14px}
+.xpbar{flex:1;min-width:140px;height:10px;background:#ffffff40;border-radius:6px;overflow:hidden}
+.xpbar div{height:100%;width:0;background:#ffd35c;transition:width .4s}
+.container{padding:18px;max-width:800px;margin:auto}
+.card{background:var(--card);padding:18px;margin-bottom:18px;border-radius:16px;box-shadow:0 3px 12px #0000000c}
+h2{font-size:19px;margin-top:0}
+input,select,button{width:100%;padding:12px;margin:8px 0;border:1px solid var(--line);border-radius:9px;font-size:15px;background:var(--card);color:var(--ink)}
+button{background:var(--main);color:#fff;border:none;cursor:pointer;font-weight:bold}
+button:hover{opacity:.9}
+button.alt{background:var(--soft);color:var(--main)}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #ffb703;outline-offset:2px}
+.row{display:flex;gap:8px}.row>*{flex:1}
+.goal{padding:12px;margin:10px 0;border-radius:10px;background:var(--soft);display:flex;align-items:center;gap:10px}
+.goal input[type=checkbox]{width:20px;height:20px;margin:0;flex:none}
+.goal span{flex:1;overflow-wrap:anywhere}
+.completed{text-decoration:line-through;opacity:.55}
+.delete{width:auto;background:var(--bad);padding:8px 10px;margin:0}
+.stats{display:flex;gap:10px}
+.stat{flex:1;text-align:center;padding:14px 5px;border-radius:12px;background:var(--soft)}
+.stat strong{display:block;font-size:25px;color:var(--main)}
+.day{padding:10px;border-bottom:1px solid var(--line)}
+#reminder{background:var(--warn);color:var(--warnink);padding:12px;border-radius:10px;display:none;margin-bottom:15px}
+small{color:var(--mute)}
+.timer{font-size:52px;font-weight:bold;text-align:center;margin:6px 0;font-variant-numeric:tabular-nums}
+.orb{width:110px;height:110px;margin:10px auto;border-radius:50%;background:radial-gradient(circle,#a9a4ff,#635bdb);opacity:.55}
+.orb.on{animation:breathe 8s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(.8);opacity:.45}50%{transform:scale(1.1);opacity:.85}}
+@media (prefers-reduced-motion:reduce){.orb.on{animation:none;opacity:.8}.xpbar div{transition:none}}
+.center{text-align:center}
+.opt{background:var(--soft);color:var(--ink);text-align:left;font-weight:normal}
+.opt.right{background:#d7f5e6;color:#145a38}
+.opt.wrong{background:#fde0e0;color:#8a1f1f}
+.solution{background:var(--soft);padding:12px;border-radius:10px;margin:8px 0}
+.badges{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.badge{padding:12px;border-radius:12px;background:var(--soft);text-align:center}
+.badge.locked{opacity:.45;filter:grayscale(1)}
+.badge b{display:block;font-size:28px}
+.badge small{display:block}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#252744;color:#fff;padding:12px 18px;border-radius:24px;opacity:0;pointer-events:none;transition:opacity .3s;max-width:90%;text-align:center;z-index:9}
+#toast.show{opacity:1}
+[hidden]{display:none!important}
+.toggle{display:flex;align-items:center;gap:10px;margin:8px 0;cursor:pointer}
+.toggle input{width:22px;height:22px;margin:0;flex:none}
+#focusMsg{color:var(--mute);font-size:14px}
+.linkbtn{display:block;padding:12px;margin:8px 0;border-radius:9px;background:var(--main);color:#fff;text-align:center;font-weight:bold;text-decoration:none}
+.linkbtn.em{background:var(--bad)}
+#sosBtn{position:fixed;right:16px;bottom:16px;width:56px;height:56px;border-radius:50%;background:var(--bad);font-size:24px;padding:0;margin:0;z-index:20;box-shadow:0 4px 14px #0004}
+#sos{position:fixed;left:0;right:0;bottom:0;max-width:800px;margin:auto;background:var(--card);padding:18px 18px 84px;border-radius:20px 20px 0 0;box-shadow:0 -6px 24px #0003;z-index:19;max-height:85vh;overflow:auto}
+details{margin:8px 0}summary{cursor:pointer;font-weight:bold;padding:6px 0}
+.perm{margin:8px 0;padding:10px;border-radius:10px;background:var(--soft);font-size:14px}
+#notificationStatus{color:var(--mute);font-size:14px}
+body.t1{zoom:1.15}body.t2{zoom:1.3}
+html.hc{--bg:#000;--card:#000;--ink:#fff;--main:#ffd400;--soft:#1a1a1a;--mute:#e6e6e6;--line:#fff;--warn:#000;--warnink:#ffd400}
+html.hc .card{border:2px solid #fff}
+html.hc button,html.hc .linkbtn,html.hc header{color:#000}
+html.hc button.alt{color:#ffd400;border:2px solid #ffd400}
+html.hc .delete,html.hc .em,html.hc #sosBtn{color:#fff}
+html.hc .pill{background:#00000026}
+html.hc .stat strong{color:#ffd400}
+.mini{font-size:13px;color:var(--mute)}
+@media (max-width:450px){.stats{gap:5px}.stat strong{font-size:21px}.timer{font-size:44px}}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>📚 StudySync</h1>
+    <p>Your goals. Your timetable. Your progress.</p>
+    <div class="hud" aria-live="polite">
+        <span class="pill" id="levelPill">Level 1</span>
+        <span class="pill" id="xpPill">0 XP</span>
+        <span class="pill" id="streakPill">🔥 0 day streak</span>
+        <div class="xpbar" aria-label="XP progress to next level"><div id="xpFill"></div></div>
+    </div>
+</header>
+
+<div class="container">
+
+    <div id="reminder" role="status"></div>
+
+    <section class="card">
+        <h2>📊 My Progress</h2>
+        <div class="stats">
+            <div class="stat"><strong id="total">0</strong><small>Total Goals</small></div>
+            <div class="stat"><strong id="done">0</strong><small>Completed</small></div>
+            <div class="stat"><strong id="pending">0</strong><small>Pending</small></div>
+        </div>
+        <button class="alt" id="restBtn" onclick="useRest()">🛌 Use my weekly rest day (keeps my streak)</button>
+        <p class="mini">One rest day per week. Rest is part of learning.</p>
+    </section>
+
+    <section class="card">
+        <h2>🎯 Add a Daily Goal</h2>
+        <input id="goalInput" type="text" placeholder="Example: Complete 5 C programs">
+        <select id="goalDay" aria-label="Goal day"></select>
+        <input id="deadline" type="date" aria-label="Goal deadline">
+        <button onclick="addGoal()">+ Add Goal</button>
+        <small>Finishing a goal earns 10 XP.</small>
+        <div id="goals"></div>
+    </section>
+
+    <section class="card">
+        <h2>🧭 Smart Focus Mode <small>(optional)</small></h2>
+        <label class="toggle"><input type="checkbox" id="smartOn"><span>Turn on Smart Focus when I want it</span></label>
+        <p><small>You pick the assignment and the time. StudySync adds gentle reminders: a halfway check-in, a 5-minute heads-up and a short break at the end. Nothing is blocked, and you can exit any time.</small></p>
+        <div id="smartBox" hidden>
+            <select id="energy" aria-label="How is your energy right now">
+                <option value="">How's your energy? (optional, not saved)</option>
+                <option value="low">Low</option><option value="ok">Okay</option><option value="high">Good</option>
+            </select>
+            <select id="focusTask" aria-label="Assignment to work on"></select>
+            <input id="focusCustom" type="text" maxlength="60" placeholder="Or type what you'll work on">
+            <select id="focusLen" aria-label="Focus duration">
+                <option value="15">15 minutes</option>
+                <option value="25" selected>25 minutes</option>
+                <option value="45">45 minutes</option>
+                <option value="60">60 minutes</option>
+            </select>
+            <label class="toggle"><input type="checkbox" id="keepAwake"><span>Keep my screen on during the session</span></label>
+            <div class="orb" id="orb"></div>
+            <div class="timer" id="timer" aria-live="off">25:00</div>
+            <p class="center" id="focusMsg">Choose what you'll work on, then start when you're ready.</p>
+            <div class="row">
+                <button id="focusStart" onclick="focusToggle()">Start</button>
+                <button class="alt" onclick="exitFocus()">Exit focus</button>
+            </div>
+            <div class="row">
+                <button class="alt" onclick="phoneTimer()">⏱ Phone timer</button>
+                <button class="alt" onclick="focusToCalendar()">📅 Add to calendar</button>
+            </div>
+            <p><small>These use your phone's own clock or calendar, so the alert still arrives when StudySync is closed. Support varies by phone.</small></p>
+        </div>
+        <div id="nudge" class="solution" hidden></div>
+    </section>
+
+    <section class="card">
+        <h2>⚡ Daily Challenge</h2>
+        <p id="challengeText"></p>
+        <p><small id="challengeHint"></small></p>
+        <button id="challengeBtn" onclick="completeChallenge()">Mark challenge done (+25 XP)</button>
+    </section>
+
+    <section class="card">
+        <h2>🧠 Quick Quiz</h2>
+        <div id="quizBox">
+            <p>Answer 5 questions. Every answer shows a solution. Each correct answer earns 5 XP, and a perfect score adds a 10 XP bonus.</p>
+            <p><small id="quizStats"></small></p>
+            <button onclick="startQuiz()">Start quiz</button>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>📘 Weekly Syllabus Quiz</h2>
+        <p><small>Log what you completed this week, then quiz yourself on it. Add your own question and short answer for the best quiz. Topics from this and last week are kept, and older ones are cleared automatically unless they are scheduled for review. Missed topics come back after 1, 3, 7 and 14 days.</small></p>
+        <input id="sylTopic" type="text" maxlength="80" placeholder="Topic completed (e.g. Pointers in C)">
+        <input id="sylQ" type="text" maxlength="140" placeholder="Your quiz question (optional)">
+        <input id="sylA" type="text" maxlength="100" placeholder="Short answer (optional)">
+        <button onclick="addSyl()">+ Add completed topic</button>
+        <button class="alt" onclick="importGoals()">Add my completed goals as topics</button>
+        <div id="sylList"></div>
+        <div id="sylQuiz"></div>
+        <button id="sylStart" onclick="startSyl()">Start weekly quiz</button>
+    </section>
+
+    <section class="card">
+        <h2>📅 Weekly Timetable</h2>
+        <input id="subject" type="text" placeholder="Subject or activity">
+        <select id="studyDay" aria-label="Study day"></select>
+        <input id="studyTime" type="time" aria-label="Study time">
+        <button onclick="addSchedule()">+ Add Study Session</button>
+        <button class="alt" onclick="scheduleToCalendar()">📅 Add timetable to calendar (.ics)</button>
+        <div id="schedule"></div>
+    </section>
+
+    <section class="card">
+        <h2>🏅 Achievements</h2>
+        <div class="badges" id="badges"></div>
+    </section>
+
+    <section class="card">
+        <h2>🗓 Exam Countdown</h2>
+        <input id="examSubject" type="text" maxlength="40" placeholder="Subject or exam">
+        <input id="examDate" type="date" aria-label="Exam date">
+        <button onclick="addExam()">+ Add exam</button>
+        <div id="examList"></div>
+    </section>
+
+    <section class="card">
+        <h2>📈 Weekly Review</h2>
+        <p><small>A kind look back at your week. Best on Sunday.</small></p>
+        <button onclick="showReview()">Show my week</button>
+        <div id="reviewBox"></div>
+    </section>
+
+    <section class="card">
+        <h2>💾 Backup &amp; Sharing</h2>
+        <p><small>Your data lives only on this device, so save a backup now and then. The backup file includes your emergency numbers, so keep it private. Quiz sets contain only topics, questions and answers, so they are safe to share with classmates.</small></p>
+        <button onclick="exportBackup()">Save backup file</button>
+        <button class="alt" onclick="exportQuizSet()">Share my quiz set (file)</button>
+        <label for="importFile"><small>Import a backup or a classmate's quiz set</small></label>
+        <input id="importFile" type="file" accept=".json,application/json">
+    </section>
+
+    <section class="card">
+        <h2>♿ Accessibility</h2>
+        <label for="textSize"><small>Text size</small></label>
+        <select id="textSize"><option value="0">Normal</option><option value="1">Large</option><option value="2">Extra large</option></select>
+        <label class="toggle"><input type="checkbox" id="hcMode"><span>High-contrast theme</span></label>
+    </section>
+
+    <section class="card">
+        <h2>🔔 Reminder Settings</h2>
+        <p>Get a reminder for unfinished goals and when a timetable session starts (while this page is open).</p>
+        <button onclick="checkGoals()">Check My Pending Goals</button>
+        <label for="notifMode"><small>Notification reminders (default: Off)</small></label>
+        <select id="notifMode">
+            <option value="off">Off</option>
+            <option value="end">End only</option>
+            <option value="all">All 4 reminders</option>
+        </select>
+        <p><small>All 4 means: timetable start, halfway, 5 minutes left and finish. They are silent, use generic wording and only appear while StudySync is in the background.</small></p>
+        <button onclick="requestNotifications()">Enable Browser Notifications</button>
+        <p id="notificationStatus"></p>
+        <p id="iosTip" class="perm" hidden>📱 On iPhone, tap Share → Add to Home Screen to get notifications. Until then, reminders appear inside the page and you can use Add to calendar.</p>
+        <details>
+            <summary>What StudySync asks for, and why</summary>
+            <div class="perm"><strong>🔔 Notifications (optional).</strong> Used only for gentle reminders: session start, halfway, 5 minutes left and finish. Asked only when you tap "Enable Browser Notifications". If you say no, reminders still appear inside the page.</div>
+            <div class="perm"><strong>💡 Keep screen on (no permission prompt).</strong> Only if you tick the box in Smart Focus. It is released the moment the session ends.</div>
+            <div class="perm"><strong>📞 Emergency buttons.</strong> StudySync never reads your calls, contacts or phone state. The buttons just hand a number to your dialer.</div>
+            <div class="perm"><strong>🚫 Never requested:</strong> location, camera, microphone, contacts, storage or phone access. StudySync does not block calls, apps or other notifications.</div>
+            <div class="perm"><strong>🌐 Hosting and install.</strong> Notifications and installing need HTTPS. Host the file free on GitHub Pages or Netlify, then in Chrome tap ⋮ → Add to Home screen so it opens like an app.</div>
+            <div class="perm"><strong>🔒 Your data.</strong> Goals, timetable, XP, streak, badges and your weekly syllabus topics stay on this device (topics are cleared automatically once their review schedule ends). Assignment names typed for focus are not saved. No account, no tracking, nothing is sent anywhere.</div>
+        </details>
+        <button id="installBtn" class="alt" hidden>📲 Install StudySync</button>
+        <button class="alt" onclick="resetAll()">Reset all data</button>
+    </section>
+
+</div>
+<button id="sosBtn" aria-label="Emergency and essentials" onclick="toggleSOS()">🆘</button>
+<div id="sos" role="dialog" aria-label="Emergency and essentials" hidden>
+    <h2>Emergency &amp; essentials</h2>
+    <p><small>Always available, even during focus. These buttons open your phone's dialer or messages, and you press call or send yourself.</small></p>
+    <button class="alt" onclick="exitFocus(true);toggleSOS()">Pause focus now</button>
+    <a id="callEm" class="linkbtn em" href="tel:112">📞 Call emergency number</a>
+    <a id="callContact" class="linkbtn" href="#" hidden>📞 Call my trusted contact</a>
+    <a id="smsContact" class="linkbtn" href="#" hidden>💬 Message my trusted contact</a>
+    <details>
+        <summary>Set my numbers (kept only on this device)</summary>
+        <input id="emNum" type="tel" inputmode="tel" placeholder="Local emergency number (default 112)">
+        <input id="contactNum" type="tel" inputmode="tel" placeholder="Trusted contact number (optional)">
+        <button onclick="saveNumbers()">Save numbers</button>
+    </details>
+    <button class="alt" onclick="toggleSOS()">Close</button>
+</div>
+<div id="toast" role="status"></div>
+
+<script>
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const WEEK = DAYS.slice(1).concat("Sunday");
+const KEY = "studysyncV2";
+const DEF = {goals:[],schedule:[],xp:0,streak:0,lastActive:"",badges:[],challengeDone:"",challengeCount:0,
+             focusSessions:0,nmode:"off",syl:[],weeklyQuizzes:0,exams:[],freezeWeek:"",freezeDay:"",quizTaken:0,perfect:0,notified:{}};
+
+function load() {
+    try {
+        const saved = JSON.parse(localStorage.getItem(KEY));
+        if (saved) return Object.assign({}, DEF, saved);
+    } catch (e) {}
+    const s = Object.assign({}, DEF);
+    try {  // migrate data from the first version
+        s.goals = JSON.parse(localStorage.getItem("studysyncGoals") || "[]");
+        s.schedule = JSON.parse(localStorage.getItem("studysyncSchedule") || "[]");
+    } catch (e) {}
+    return s;
+}
+let S = load();
+function saveData() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+const $ = id => document.getElementById(id);
+
+function fmt(d) {
+    return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
+}
+const today = () => fmt(new Date());
+
+let toastTimer;
+function toast(msg) {
+    const t = $("toast"); t.textContent = msg; t.classList.add("show");
+    clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove("show"), 2800);
+}
+
+/* ---------- XP, streaks, badges ---------- */
+const BADGES = [
+    {id:"first",  icon:"🌱", name:"First Step",     desc:"Complete 1 goal",       ok:()=>S.goals.filter(g=>g.completed).length>=1},
+    {id:"five",   icon:"✅", name:"Goal Getter",    desc:"Complete 5 goals",      ok:()=>S.goals.filter(g=>g.completed).length>=5},
+    {id:"planner",icon:"🗓️", name:"Planner",        desc:"Add 5 timetable sessions", ok:()=>S.schedule.length>=5},
+    {id:"s3",     icon:"🔥", name:"On a Roll",      desc:"3 day streak",          ok:()=>S.streak>=3},
+    {id:"s7",     icon:"🌟", name:"Week Warrior",   desc:"7 day streak",          ok:()=>S.streak>=7},
+    {id:"f1",     icon:"🌿", name:"Calm Focus",     desc:"Finish 1 focus session",ok:()=>S.focusSessions>=1},
+    {id:"f5",     icon:"🧘", name:"Deep Worker",    desc:"Finish 5 focus sessions",ok:()=>S.focusSessions>=5},
+    {id:"chal",   icon:"⚡", name:"Challenger",     desc:"Do a daily challenge",  ok:()=>S.challengeCount>=1},
+    {id:"quiz",   icon:"🧠", name:"Quiz Taker",     desc:"Finish a quiz",         ok:()=>S.quizTaken>=1},
+    {id:"wk",    icon:"📘", name:"Weekly Reviewer", desc:"Finish a weekly syllabus quiz", ok:()=>S.weeklyQuizzes>=1},
+    {id:"ace",    icon:"🏆", name:"Quiz Ace",       desc:"Score 5/5 on a quiz",   ok:()=>S.perfect>=1},
+    {id:"l3",     icon:"🚀", name:"Level 3",        desc:"Reach level 3",         ok:()=>level()>=3}
+];
+const level = () => Math.floor(S.xp / 100) + 1;
+
+function touchStreak() {
+    const t = today();
+    if (S.lastActive === t) return;
+    const y = dayAgo(1), y2 = dayAgo(2);
+    S.streak = (S.lastActive === y || (S.freezeDay === y && S.lastActive === y2)) ? S.streak + 1 : 1;
+    S.lastActive = t;
+}
+function addXP(n, msg) {
+    if (n <= 0) return;
+    const before = level();
+    S.xp += n;
+    touchStreak();
+    toast("+" + n + " XP" + (msg ? " · " + msg : "") + (level() > before ? " · Level up! 🎉" : ""));
+    checkBadges();
+    saveData(); renderHud();
+}
+function checkBadges() {
+    BADGES.forEach(b => {
+        if (!S.badges.includes(b.id) && b.ok()) {
+            S.badges.push(b.id);
+            setTimeout(() => toast("Badge unlocked: " + b.icon + " " + b.name), 1400);
+        }
+    });
+    renderBadges();
+}
+function renderHud() {
+    $("levelPill").textContent = "Level " + level();
+    $("xpPill").textContent = S.xp + " XP";
+    // streak only counts if it was active today or yesterday
+    const live = liveStreak(), rested = S.freezeWeek === weekKey(0);
+    $("restBtn").textContent = rested ? "🌙 Rest day used this week" : "🛌 Use my weekly rest day (keeps my streak)";
+    $("restBtn").disabled = rested;
+    const bar = $("xpFill").parentElement; bar.setAttribute("role", "progressbar"); bar.setAttribute("aria-valuenow", S.xp % 100);
+    $("streakPill").textContent = "🔥 " + live + " day streak";
+    $("xpFill").style.width = (S.xp % 100) + "%";
+}
+function renderBadges() {
+    const box = $("badges"); box.innerHTML = "";
+    BADGES.forEach(b => {
+        const d = document.createElement("div");
+        d.className = "badge" + (S.badges.includes(b.id) ? "" : " locked");
+        const i = document.createElement("b"); i.textContent = b.icon;
+        const n = document.createElement("strong"); n.textContent = b.name;
+        const s = document.createElement("small"); s.textContent = b.desc;
+        d.append(i, n, s); box.appendChild(d);
+    });
+}
+
+/* ---------- Goals ---------- */
+function fillDays() {
+    ["goalDay","studyDay"].forEach(id => {
+        WEEK.forEach(d => { const o = document.createElement("option"); o.textContent = d; $(id).appendChild(o); });
+        $(id).value = DAYS[new Date().getDay()];
+    });
+}
+function addGoal() {
+    const text = $("goalInput").value.trim();
+    if (!text) { alert("Please enter a study goal!"); return; }
+    S.goals.push({id:Date.now(), text, day:$("goalDay").value, deadline:$("deadline").value,
+                  completed:false, rewarded:false});
+    $("goalInput").value = "";
+    saveData(); renderGoals();
+}
+function toggleGoal(id) {
+    const g = S.goals.find(x => x.id === id);
+    if (!g) return;
+    g.completed = !g.completed; g.doneWeek = g.completed ? weekKey(0) : "";
+    let reward = false;
+    if (g.completed && !g.rewarded) { g.rewarded = true; reward = true; }
+    saveData(); renderGoals();
+    if (reward) addXP(10, "goal complete"); else checkBadges();
+}
+function deleteGoal(id) { S.goals = S.goals.filter(g => g.id !== id); saveData(); renderGoals(); }
+
+function renderGoals() {
+    const c = $("goals"); c.innerHTML = "";
+    if (!S.goals.length) c.innerHTML = "<p>No goals added yet. Add your first one above.</p>";
+    S.goals.forEach(goal => {
+        const item = document.createElement("div"); item.className = "goal";
+        const cb = document.createElement("input"); cb.type = "checkbox"; cb.checked = goal.completed;
+        cb.setAttribute("aria-label", "Mark goal completed");
+        cb.addEventListener("change", () => toggleGoal(goal.id));
+        const label = document.createElement("span");
+        label.className = goal.completed ? "completed" : "";
+        label.textContent = goal.text + " — " + goal.day + (goal.deadline ? " (Due: " + goal.deadline + ")" : "");
+        const rm = document.createElement("button"); rm.className = "delete"; rm.textContent = "Delete";
+        rm.addEventListener("click", () => deleteGoal(goal.id));
+        item.append(cb, label, rm); c.appendChild(item);
+    });
+    $("total").textContent = S.goals.length;
+    $("done").textContent = S.goals.filter(g => g.completed).length;
+    $("pending").textContent = S.goals.filter(g => !g.completed).length;
+    checkGoals(false);
+}
+
+/* ---------- Timetable ---------- */
+function addSchedule() {
+    const subject = $("subject").value.trim(), time = $("studyTime").value;
+    if (!subject || !time) { alert("Enter a subject and study time!"); return; }
+    S.schedule.push({id:Date.now(), subject, day:$("studyDay").value, time});
+    $("subject").value = ""; $("studyTime").value = "";
+    saveData(); renderSchedule(); checkBadges();
+}
+function renderSchedule() {
+    const c = $("schedule"); c.innerHTML = "";
+    const todayName = DAYS[new Date().getDay()];
+    WEEK.forEach(day => {
+        const list = S.schedule.filter(s => s.day === day).sort((a,b) => a.time.localeCompare(b.time));
+        const sec = document.createElement("div"); sec.className = "day";
+        const h = document.createElement("strong"); h.textContent = day + (day === todayName ? " (today)" : "");
+        sec.appendChild(h);
+        if (!list.length) { const p = document.createElement("p"); p.innerHTML = "<small>No study sessions planned.</small>"; sec.appendChild(p); }
+        list.forEach(s => {
+            const row = document.createElement("p");
+            row.textContent = s.time + " — " + s.subject + " ";
+            const rm = document.createElement("button"); rm.className = "delete"; rm.textContent = "Remove";
+            rm.style.width = "auto";
+            rm.addEventListener("click", () => { S.schedule = S.schedule.filter(x => x.id !== s.id); saveData(); renderSchedule(); });
+            row.appendChild(rm); sec.appendChild(row);
+        });
+        c.appendChild(sec);
+    });
+}
+
+/* ---------- Reminders ---------- */
+function isOverdue(g) {
+    if (g.completed || !g.deadline) return false;
+    const t = new Date(); t.setHours(0,0,0,0);
+    return new Date(g.deadline + "T00:00:00") < t;
+}
+function checkGoals(showAlert = true) {
+    const pending = S.goals.filter(g => !g.completed), overdue = S.goals.filter(isOverdue);
+    const r = $("reminder");
+    if (overdue.length) { r.style.display = "block"; r.textContent = "⚠️ You have " + overdue.length + " overdue goal(s). Finish what you can, one at a time."; }
+    else if (pending.length) { r.style.display = "block"; r.textContent = "📚 You still have " + pending.length + " pending goal(s). Keep working towards your weekly target!"; }
+    else r.style.display = "none";
+    if (showAlert) alert(overdue.length ? "You have " + overdue.length + " overdue goal(s)!" : "You have " + pending.length + " pending goal(s).");
+}
+function notify(body, kind) {  /* generic, silent text only; never the assignment name */
+    const m = S.nmode || "off";
+    if (m === "off" || (m === "end" && kind !== "end")) return;
+    if (!document.hidden) return;  /* page is open: the in-page toast is enough */
+    if (!("Notification" in window) || Notification.permission !== "granted") return;
+    const opt = {body, silent:true, tag:"studysync-" + kind};
+    try { new Notification("StudySync", opt); }
+    catch (e) { try { navigator.serviceWorker.getRegistration().then(r => r && r.showNotification("StudySync", opt)); } catch (e2) {} }
+}
+function notifStatus() {
+    const ios = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    const installed = navigator.standalone === true || window.matchMedia("(display-mode: standalone)").matches;
+    $("iosTip").hidden = !(ios && !installed);
+    let t;
+    if (location.protocol === "file:" || !window.isSecureContext) t = "Notifications need this page hosted over HTTPS. In-page reminders still work.";
+    else if (!("Notification" in window)) t = "This browser can't show notifications here. In-page reminders still work.";
+    else if (Notification.permission === "granted") t = "Notifications: allowed.";
+    else if (Notification.permission === "denied") t = "Notifications: blocked. To turn them on, tap the lock icon in the address bar → Permissions → Notifications → Allow. In-page reminders still work.";
+    else t = "Notifications: not asked yet. Tap the button when you want them.";
+    $("notificationStatus").textContent = t;
+}
+async function requestNotifications() {
+    if ("Notification" in window && window.isSecureContext && Notification.permission !== "denied") {
+        try {
+            const r = await Notification.requestPermission();
+            if (r === "granted" && S.nmode === "off") { S.nmode = "end"; $("notifMode").value = "end"; saveData(); }
+        } catch (e) {}
+    }
+    notifStatus();
+}
+function sessionReminders() {
+    const now = new Date(), t = today();
+    if (Object.keys(S.notified).some(k => !k.startsWith(t))) S.notified = {};
+    const nowMin = now.getHours() * 60 + now.getMinutes();
+    S.schedule.forEach(s => {
+        const k = t + "|" + s.id, [h, m] = s.time.split(":").map(Number), diff = nowMin - (h * 60 + m);
+        if (s.day === DAYS[now.getDay()] && diff >= 0 && diff <= 10 && !S.notified[k]) {  /* catches up if the page was asleep */
+            S.notified[k] = 1; saveData();
+            toast(diff === 0 ? "⏰ Time for " + s.subject : "⏰ " + s.subject + " started " + diff + " min ago");
+            notify("Your study session is starting.", "start");
+        }
+    });
+}
+setInterval(sessionReminders, 20000);
+
+/* ---------- Smart Focus (optional, student-controlled) ---------- */
+let fEnd=0,fLeft=0,fTotal=0,fTimer=null,fTask="",fHalf=false,fFive=false,fWake=null,fActive=false;
+const mmss=s=>String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");
+function focusDraw(){ $("timer").textContent=mmss(Math.max(0,Math.ceil(fLeft))); }
+function setIdleTimer(){ fLeft=fTotal=(+$("focusLen").value)*60; focusDraw(); }
+function fillTasks(){
+    const sel=$("focusTask"), cur=sel.value; sel.innerHTML="";
+    sel.add(new Option("Choose an assignment…",""));
+    S.goals.filter(g=>!g.completed).forEach(g=>sel.add(new Option(g.text.slice(0,50),g.text)));
+    sel.value=cur;
+}
+$("smartOn").addEventListener("change",()=>{
+    const on=$("smartOn").checked; $("smartBox").hidden=!on;
+    if(on){ fillTasks(); if(!fActive) setIdleTimer(); }
+    else if(fActive) exitFocus();
+});
+$("focusTask").addEventListener("focus",fillTasks);
+$("focusLen").addEventListener("change",()=>{ if(!fActive) setIdleTimer(); });
+async function lockScreen(){ try{ if($("keepAwake").checked && "wakeLock" in navigator) fWake=await navigator.wakeLock.request("screen"); }catch(e){} }
+function unlockScreen(){ try{ if(fWake) fWake.release(); }catch(e){} fWake=null; }
+function gentle(m, body, kind){ toast(m); notify(body, kind); }
+function tick(){
+    fLeft=(fEnd-Date.now())/1000; focusDraw();
+    if(!fHalf && fLeft<=fTotal/2){ fHalf=true; gentle("Halfway there on "+fTask+". You're doing great.","Halfway there. You're doing great.","mid"); }
+    if(!fFive && fLeft<=300){ fFive=true; gentle("5 minutes left. Finish gently, then take a break.","5 minutes left. Finish gently.","mid"); }
+    if(fLeft<=0) focusEnd(true);
+}
+function pauseFocus(){
+    clearInterval(fTimer); fTimer=null; fLeft=Math.max(0,(fEnd-Date.now())/1000);
+    $("orb").classList.remove("on"); $("focusStart").textContent="Resume"; unlockScreen();
+}
+function focusToggle(){
+    $("nudge").hidden=true; clearInterval(bTimer);
+    if(fTimer){ pauseFocus(); $("focusMsg").textContent="Paused. Take the time you need."; return; }
+    if(!fActive){
+        fTask=$("focusCustom").value.trim()||$("focusTask").value;
+        if(!fTask){ toast("Choose or type what you'll work on first."); return; }
+        setIdleTimer(); fActive=true; fHalf=fFive=false;
+    }
+    fEnd=Date.now()+fLeft*1000;
+    $("focusLen").disabled=true; $("orb").classList.add("on"); $("focusStart").textContent="Pause";
+    $("focusMsg").textContent="Working on: "+fTask+". Breathe in as the circle grows, out as it shrinks.";
+    fTimer=setInterval(tick,500); lockScreen();
+}
+function exitFocus(quiet){  /* exits at once; never asks for confirmation */
+    if(!fActive) return;
+    if(fTimer) pauseFocus();
+    $("focusMsg").textContent="Paused. Take care of what you need first.";
+    if(quiet===true){ toast("Focus paused. Your session waits whenever you're ready."); return; }
+    const mins=Math.max(1,Math.ceil(fLeft/60)), n=$("nudge"); n.textContent="";
+    const p=document.createElement("p");
+    p.textContent="You have "+mins+" minute"+(mins===1?"":"s")+" left on "+fTask+". Keep going! You can also pick it up later.";
+    const r=document.createElement("button"); r.textContent="Resume";
+    r.addEventListener("click",()=>{ $("smartOn").checked=true; $("smartBox").hidden=false; focusToggle(); });
+    const d=document.createElement("button"); d.className="alt"; d.textContent="Done for now";
+    d.addEventListener("click",()=>focusEnd(false));
+    n.append(p,r,d); n.hidden=false;
+}
+function focusEnd(full){
+    const elapsed=Math.round((fTotal-Math.max(0,fLeft))/60);
+    clearInterval(fTimer); fTimer=null; fActive=false; fTask=""; unlockScreen();
+    $("nudge").hidden=true; $("orb").classList.remove("on"); $("focusLen").disabled=false;
+    $("focusStart").textContent="Start"; $("focusCustom").value=""; setIdleTimer();
+    if(full){
+        S.focusSessions++; wkBump("focus");
+        $("focusMsg").textContent="Session complete! Take a 5-minute break: stretch and sip some water.";
+        notify("Session complete. Time for a break!","end");
+        addXP(elapsed,"focus session"); showBreak();
+    } else if(elapsed>=5){
+        $("focusMsg").textContent="Good effort. "+elapsed+" minutes counts.";
+        addXP(Math.floor(elapsed/2),"partial focus");
+    } else $("focusMsg").textContent="No problem. Come back when you're ready.";
+    saveData();
+}
+
+/* ---------- Phone timer, calendar files, catch-up ---------- */
+function remainingSec() {
+    if (fTimer) return Math.max(60, Math.round((fEnd - Date.now()) / 1000));
+    if (fActive) return Math.max(60, Math.round(fLeft));
+    return (+$("focusLen").value) * 60;
+}
+function phoneTimer() {
+    const sec = remainingSec();
+    if (/Android/i.test(navigator.userAgent)) {
+        toast("Opening your clock app…");
+        location.href = "intent:#Intent;action=android.intent.action.SET_TIMER;i.android.intent.extra.alarm.LENGTH=" + sec + ";S.android.intent.extra.alarm.MESSAGE=StudySync;end";
+    } else toast("Open your phone's clock app and start a " + Math.ceil(sec / 60) + "-minute timer.");
+}
+const p2 = n => String(n).padStart(2, "0");
+const icsLocal = d => d.getFullYear() + p2(d.getMonth() + 1) + p2(d.getDate()) + "T" + p2(d.getHours()) + p2(d.getMinutes()) + "00";
+const icsUtc = d => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+const icsEsc = t => String(t).replace(/[\\;,]/g, c => "\\" + c).replace(/\n/g, "\\n");
+const ICSDAY = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"];
+function downloadICS(events, name) {
+    const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//StudySync//EN", "CALSCALE:GREGORIAN"].concat(events.flat(), ["END:VCALENDAR"]);
+    const url = URL.createObjectURL(new Blob([lines.join("\r\n")], {type:"text/calendar"}));
+    const a = document.createElement("a"); a.href = url; a.download = name;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+}
+function focusToCalendar() {
+    const start = new Date(), end = new Date(start.getTime() + remainingSec() * 1000);
+    downloadICS([["BEGIN:VEVENT", "UID:focus" + Date.now() + "@studysync", "DTSTAMP:" + icsUtc(new Date()),
+        "DTSTART:" + icsLocal(start), "DTEND:" + icsLocal(end), "SUMMARY:StudySync focus session",
+        "BEGIN:VALARM", "ACTION:DISPLAY", "DESCRIPTION:5 minutes left", "TRIGGER;RELATED=END:-PT5M", "END:VALARM", "END:VEVENT"]], "studysync-focus.ics");
+    toast("Open the downloaded file to add it to your calendar.");
+}
+function scheduleToCalendar() {
+    if (!S.schedule.length) { toast("Add a study session first."); return; }
+    const ev = S.schedule.map(s => {
+        const [h, m] = s.time.split(":").map(Number), di = DAYS.indexOf(s.day), d = new Date();
+        d.setDate(d.getDate() + (di - d.getDay() + 7) % 7); d.setHours(h, m, 0, 0);
+        const e = new Date(d.getTime() + 45 * 60000);
+        return ["BEGIN:VEVENT", "UID:" + s.id + "@studysync", "DTSTAMP:" + icsUtc(new Date()),
+            "DTSTART:" + icsLocal(d), "DTEND:" + icsLocal(e), "RRULE:FREQ=WEEKLY;BYDAY=" + ICSDAY[di],
+            "SUMMARY:StudySync study session", "DESCRIPTION:" + icsEsc(s.subject),
+            "BEGIN:VALARM", "ACTION:DISPLAY", "DESCRIPTION:Study session starting soon", "TRIGGER:-PT10M", "END:VALARM", "END:VEVENT"];
+    });
+    downloadICS(ev, "studysync-timetable.ics");
+    toast("Open the downloaded file to add your weekly sessions (45 min each).");
+}
+$("notifMode").addEventListener("change", () => { S.nmode = $("notifMode").value; saveData(); });
+document.addEventListener("visibilitychange", () => {  /* catch up after the phone slept */
+    if (!document.hidden) { if (fTimer) tick(); sessionReminders(); }
+});
+
+/* ---------- Weekly syllabus quiz (built from what the student completed) ---------- */
+function mk(tag, text, cls) { const e = document.createElement(tag); if (text) e.textContent = text; if (cls) e.className = cls; return e; }
+function weekKey(back = 0) { const d = new Date(); d.setDate(d.getDate() - ((d.getDay() + 6) % 7) - 7 * back); return fmt(d); }
+function pruneSyl() { const ok = [weekKey(0), weekKey(1)]; S.syl = (S.syl || []).filter(x => ok.includes(x.week) || (x.due && x.due >= today())); }
+function addSyl() {
+    const topic = $("sylTopic").value.trim();
+    if (!topic) { alert("Enter the topic you completed."); return; }
+    pruneSyl();
+    S.syl.push({id:Date.now(), topic, q:$("sylQ").value.trim(), a:$("sylA").value.trim(), week:weekKey(0)});
+    ["sylTopic","sylQ","sylA"].forEach(id => $(id).value = "");
+    saveData(); renderSyl();
+}
+function importGoals() {
+    pruneSyl();
+    const have = new Set(S.syl.map(x => x.topic.toLowerCase())); let n = 0;
+    S.goals.filter(g => g.completed).forEach(g => {
+        const t = g.text.slice(0, 80);
+        if (!have.has(t.toLowerCase())) { S.syl.push({id:Date.now() + n, topic:t, q:"", a:"", week:weekKey(0)}); have.add(t.toLowerCase()); n++; }
+    });
+    saveData(); renderSyl(); toast(n ? "Added " + n + " topic(s)." : "No new completed goals to add.");
+}
+function renderSyl() {
+    pruneSyl();
+    const list = $("sylList"); list.innerHTML = "";
+    if (!S.syl.length) list.appendChild(mk("p", "No topics yet. Add what you completed this week."));
+    const due = dueCount(); if (due) list.appendChild(mk("p", "🔁 " + due + " topic(s) due for review. The quiz starts with them."));
+    S.syl.forEach(x => {
+        const row = mk("div", "", "goal");
+        const label = mk("span", x.topic + (x.q ? " — has a question" : ""));
+        const rm = mk("button", "Remove", "delete");
+        rm.addEventListener("click", () => { S.syl = S.syl.filter(y => y.id !== x.id); saveData(); renderSyl(); });
+        row.append(label, rm); list.appendChild(row);
+    });
+    $("sylStart").disabled = !S.syl.length;
+}
+let SQ = null;
+function startSyl() {
+    if (!S.syl.length) { toast("Add a topic first."); return; }
+    const answers = [...new Set(S.syl.filter(x => x.a).map(x => x.a))];
+    const shuffle = a => a.slice().sort(() => Math.random() - .5);
+    const cards = shuffle(S.syl).sort((a, b) => dueNow(b) - dueNow(a)).slice(0, 10).map(x => {
+        const q = x.q || "Explain \"" + x.topic + "\" in your own words.";
+        const others = shuffle(answers.filter(a => a !== x.a)).slice(0, 3);
+        if (x.a && others.length >= 3) {
+            const opts = shuffle(others.concat(x.a));
+            return {id:x.id, q, topic:x.topic, mode:"mc", opts, ans:opts.indexOf(x.a), sol:x.a};
+        }
+        return {id:x.id, q, topic:x.topic, mode:"self", sol:x.a || "Check your notes for: " + x.topic};
+    });
+    SQ = {cards, i:0, score:0, missed:[]};
+    $("sylStart").hidden = true; $("sylList").hidden = true; showSyl();
+}
+function showSyl() {
+    const box = $("sylQuiz"), c = SQ.cards[SQ.i]; box.innerHTML = "";
+    const head = mk("p"); head.innerHTML = "<small></small>";
+    head.firstChild.textContent = "Question " + (SQ.i + 1) + " of " + SQ.cards.length + " · " + c.topic;
+    box.append(head, mk("p", c.q, "solution"));
+    const holder = mk("div"); box.appendChild(holder);
+    if (c.mode === "mc") {
+        const btns = c.opts.map((o, i) => {
+            const b = mk("button", o, "opt");
+            b.addEventListener("click", () => {
+                btns.forEach((x, j) => { x.disabled = true; if (j === c.ans) x.classList.add("right"); else if (j === i) x.classList.add("wrong"); });
+                sylResult(holder, i === c.ans, c);
+            });
+            holder.appendChild(b); return b;
+        });
+    } else {
+        const typed = mk("input"); typed.type = "text"; typed.maxLength = 140; typed.placeholder = "Type what you remember (optional, not saved)";
+        const show = mk("button", "Show solution");
+        show.addEventListener("click", () => {
+            holder.innerHTML = "";
+            holder.appendChild(mk("div", "Solution: " + c.sol, "solution"));
+            const row = mk("div", "", "row");
+            const yes = mk("button", "Got it ✅"), no = mk("button", "Need review 🔁", "alt");
+            yes.addEventListener("click", () => { SQ.score++; sylMark(c, true); sylNext(); });
+            no.addEventListener("click", () => { SQ.missed.push(c.topic); sylMark(c, false); sylNext(); });
+            row.append(yes, no); holder.appendChild(row);
+        });
+        holder.append(typed, show);
+    }
+}
+function sylResult(holder, ok, c) {
+    if (ok) SQ.score++; else SQ.missed.push(c.topic);
+    sylMark(c, ok);
+    holder.appendChild(mk("div", (ok ? "✅ Correct. " : "❌ Not quite. ") + "Solution: " + c.sol, "solution"));
+    const next = mk("button", SQ.i + 1 < SQ.cards.length ? "Next question" : "See results");
+    next.addEventListener("click", sylNext); holder.appendChild(next);
+}
+function sylNext() { SQ.i++; if (SQ.i < SQ.cards.length) showSyl(); else endSyl(); }
+function endSyl() {
+    const n = SQ.cards.length, sc = SQ.score, perfect = sc === n, box = $("sylQuiz"); box.innerHTML = "";
+    S.weeklyQuizzes = (S.weeklyQuizzes || 0) + 1; wkBump("quiz"); saveData();
+    box.appendChild(mk("p", "You got " + sc + " / " + n + ". " + (perfect ? "You've got this week's syllabus down! 🏆" : "Good review. A little more practice will lock it in.")));
+    if (SQ.missed.length) box.appendChild(mk("div", "Review next: " + [...new Set(SQ.missed)].join(", "), "solution"));
+    const done = mk("button", "Done");
+    done.addEventListener("click", () => { box.innerHTML = ""; $("sylStart").hidden = false; $("sylList").hidden = false; });
+    box.appendChild(done);
+    addXP(sc * 5 + (perfect ? 10 : 0), "weekly quiz"); checkBadges();
+}
+
+/* ---------- Streak rest day, week helpers ---------- */
+function dayAgo(n) { return fmt(new Date(Date.now() - n * 864e5)); }
+function inDays(n) { return fmt(new Date(Date.now() + n * 864e5)); }
+function liveStreak() {
+    const t = today(), y = dayAgo(1), y2 = dayAgo(2);
+    return (S.lastActive === t || S.lastActive === y || (S.freezeDay === y && S.lastActive === y2)) ? S.streak : 0;
+}
+function useRest() {
+    if (S.freezeWeek === weekKey(0)) { toast("You've already used this week's rest day."); return; }
+    S.freezeWeek = weekKey(0); S.freezeDay = today(); saveData(); renderHud();
+    toast("Rest day set. Your streak is safe. Rest well 🌙");
+}
+function wkBump(k) {
+    if (!S.wk || S.wk.week !== weekKey(0)) S.wk = {week:weekKey(0), focus:0, quiz:0};
+    S.wk[k] = (S.wk[k] || 0) + 1;
+}
+
+/* ---------- Spaced repetition for syllabus topics ---------- */
+const STEPS = [1, 3, 7, 14];
+function dueNow(x) { return x.due && x.due <= today() ? 1 : 0; }
+function dueCount() { return S.syl.filter(dueNow).length; }
+function sylMark(c, ok) {
+    const x = S.syl.find(y => y.id === c.id); if (!x) return;
+    x.step = ok ? Math.min((x.step || 0) + 1, 3) : 0;
+    x.due = inDays(ok ? STEPS[x.step] : 1); saveData();
+}
+
+/* ---------- Exam countdown ---------- */
+function addExam() {
+    const subject = $("examSubject").value.trim(), date = $("examDate").value;
+    if (!subject || !date) { alert("Enter a subject and a date."); return; }
+    S.exams = S.exams || []; S.exams.push({id:Date.now(), subject, date});
+    $("examSubject").value = ""; $("examDate").value = ""; saveData(); renderExams();
+}
+function renderExams() {
+    const t = new Date(); t.setHours(0, 0, 0, 0);
+    S.exams = (S.exams || []).filter(e => new Date(e.date + "T00:00:00") >= t)
+        .sort((a, b) => a.date.localeCompare(b.date));  /* past exams are cleared */
+    const box = $("examList"); box.innerHTML = "";
+    if (!S.exams.length) box.appendChild(mk("p", "No exams added yet."));
+    S.exams.forEach(e => {
+        const days = Math.round((new Date(e.date + "T00:00:00") - t) / 864e5), due = dueCount();
+        const hint = days <= 1 ? "Rest well and do light revision."
+            : days <= 7 ? (due ? "Focus on the " + due + " topic(s) due for review." : "Keep a steady pace. You're on track.")
+            : "Plenty of time. Small steps each day.";
+        const row = mk("div", "", "goal"), label = mk("span", e.subject + " — " + (days === 0 ? "today" : days + " day" + (days === 1 ? "" : "s") + " left") + ". " + hint);
+        const rm = mk("button", "Remove", "delete");
+        rm.addEventListener("click", () => { S.exams = S.exams.filter(x => x.id !== e.id); saveData(); renderExams(); });
+        row.append(label, rm); box.appendChild(row);
+    });
+}
+
+/* ---------- Weekly review ---------- */
+function showReview() {
+    const w = weekKey(0), box = $("reviewBox"); box.innerHTML = "";
+    const done = S.goals.filter(g => g.completed && g.doneWeek === w).length;
+    const k = (S.wk && S.wk.week === w) ? S.wk : {focus:0, quiz:0};
+    const due = S.syl.filter(dueNow).map(x => x.topic);
+    [["✅ Goals completed", done], ["🧭 Focus sessions", k.focus || 0], ["🧠 Quizzes finished", k.quiz || 0],
+     ["🔥 Streak (days)", liveStreak()], ["⭐ Total XP", S.xp]].forEach(r => box.appendChild(mk("p", r[0] + ": " + r[1])));
+    box.appendChild(mk("div", (done + (k.focus || 0) + (k.quiz || 0)) > 0 ? "You showed up this week, and that matters. Be proud of it." : "A quiet week is okay. Pick one small goal to ease back in.", "solution"));
+    if (due.length) box.appendChild(mk("div", "Revisit next: " + due.slice(0, 8).join(", "), "solution"));
+}
+
+/* ---------- Energy check-in and breaks ---------- */
+$("energy").addEventListener("change", () => {
+    const v = $("energy").value; if (!v || fActive) return;
+    $("focusLen").value = String({low:15, ok:25, high:45}[v]); setIdleTimer();
+    $("focusMsg").textContent = v === "low" ? "Low energy is okay. A short 15-minute block is a win."
+        : v === "high" ? "Feeling sharp! A longer block could work well." : "A steady 25 minutes sounds good.";
+});
+const BREAKS = ["Stretch your arms and shoulders for a minute.", "Drink some water.", "Rest your eyes by looking out a window.", "Walk around the room for a few minutes.", "Take five slow breaths."];
+let bTimer = null;
+function showBreak() {
+    const n = $("nudge"); n.textContent = "";
+    n.appendChild(mk("p", "Break idea: " + BREAKS[Math.floor(Math.random() * BREAKS.length)]));
+    const b = mk("button", "Start 5-minute break timer"), skip = mk("button", "Skip", "alt");
+    b.addEventListener("click", () => {
+        b.disabled = true; clearInterval(bTimer); const end = Date.now() + 300000;
+        bTimer = setInterval(() => {
+            const left = Math.ceil((end - Date.now()) / 1000);
+            if (left <= 0) { clearInterval(bTimer); n.hidden = true; gentle("Break over. Ready when you are.", "Break over. Ready when you are.", "end"); }
+            else b.textContent = "Break: " + mmss(left);
+        }, 500);
+    });
+    skip.addEventListener("click", () => { clearInterval(bTimer); n.hidden = true; });
+    n.append(b, skip); n.hidden = false;
+}
+
+/* ---------- Backup, import and quiz-set sharing ---------- */
+function saveFile(text, name) {
+    const url = URL.createObjectURL(new Blob([text], {type:"application/json"}));
+    const a = mk("a"); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+}
+function exportBackup() { saveFile(JSON.stringify(S), "studysync-backup.json"); toast("Backup saved. Keep it somewhere safe."); }
+function exportQuizSet() {
+    const items = S.syl.filter(x => x.q && x.a).map(x => ({topic:x.topic, q:x.q, a:x.a}));
+    if (!items.length) { toast("Add topics with a question and answer first."); return; }
+    saveFile(JSON.stringify({type:"studysync-quiz", items}), "studysync-quiz-set.json"); toast("Quiz set saved. Send the file to a classmate.");
+}
+const cut = (v, n) => String(v == null ? "" : v).slice(0, n);
+function importData(d) {
+    if (d && d.type === "studysync-quiz" && Array.isArray(d.items)) {
+        pruneSyl(); const have = new Set(S.syl.map(x => x.topic.toLowerCase())); let n = 0;
+        d.items.slice(0, 50).forEach((it, i) => {
+            const topic = cut(it && it.topic, 80).trim();
+            if (topic && !have.has(topic.toLowerCase())) { S.syl.push({id:Date.now() + i, topic, q:cut(it.q, 140), a:cut(it.a, 100), week:weekKey(0)}); have.add(topic.toLowerCase()); n++; }
+        });
+        saveData(); renderSyl(); toast("Added " + n + " topic(s) from the quiz set."); return;
+    }
+    if (d && Array.isArray(d.goals) && Array.isArray(d.schedule)) {
+        if (!confirm("Replace everything in StudySync with this backup?")) return;
+        d.goals = d.goals.filter(g => g && typeof g.text === "string");
+        d.schedule = d.schedule.filter(x => x && ["subject", "day", "time"].every(f => typeof x[f] === "string"));
+        d.syl = (d.syl || []).filter(x => x && typeof x.topic === "string");
+        d.exams = (d.exams || []).filter(x => x && typeof x.subject === "string" && typeof x.date === "string");
+        S = Object.assign({}, DEF, d); saveData(); renderAll(); toast("Backup restored."); return;
+    }
+    toast("That isn't a StudySync file.");
+}
+$("importFile").addEventListener("change", e => {
+    const f = e.target.files[0]; if (!f) return;
+    if (f.size > 1e6) { toast("That file is too large."); e.target.value = ""; return; }
+    const r = new FileReader();
+    r.onload = () => { try { importData(JSON.parse(r.result)); } catch (err) { toast("Couldn't read that file."); } e.target.value = ""; };
+    r.readAsText(f);
+});
+
+/* ---------- Accessibility ---------- */
+function applyUI() {
+    const u = S.ui || {t:0, hc:false};
+    document.body.classList.remove("t1", "t2"); if (u.t) document.body.classList.add("t" + u.t);
+    document.documentElement.classList.toggle("hc", !!u.hc);
+    $("textSize").value = String(u.t || 0); $("hcMode").checked = !!u.hc;
+}
+$("textSize").addEventListener("change", () => { S.ui = Object.assign({}, S.ui, {t:+$("textSize").value}); saveData(); applyUI(); });
+$("hcMode").addEventListener("change", () => { S.ui = Object.assign({}, S.ui, {hc:$("hcMode").checked}); saveData(); applyUI(); });
+
+/* ---------- Install as an app (needs HTTPS hosting) ---------- */
+let deferredInstall = null;
+window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferredInstall = e; $("installBtn").hidden = false; });
+$("installBtn").addEventListener("click", async () => {
+    if (!deferredInstall) return;
+    deferredInstall.prompt(); try { await deferredInstall.userChoice; } catch (e) {}
+    deferredInstall = null; $("installBtn").hidden = true;
+});
+/* The app manifest is built here so everything stays in this one file. */
+(function () {
+    if (!location.protocol.startsWith("http")) return;
+    try {
+        const icon = (n, d) => ({src:"data:image/png;base64," + d, sizes:n + "x" + n, type:"image/png", purpose:"any maskable"});
+        const m = {name:"StudySync", short_name:"StudySync", start_url:location.href.split("#")[0], display:"standalone",
+                   background_color:"#f3f4fb", theme_color:"#635bdb",
+                   icons:[icon(192, "iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAWfmNhQlgAABZ+anVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQNjMnBhAAAAFlhqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3VybjpjMnBhOmVlZTU5MjQyLTJkMTktNGQ2NC05YTgzLTM4MzUyZWY5NzYxMgAAAAOTanVtYgAAAClqdW1kYzJhcwARABCAAACqADibcQNjMnBhLmFzc2VydGlvbnMAAAAAuGp1bWIAAABEanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5pbmdyZWRpZW50LnYzAAAAABhjMnNobgGsiQmtM+XnIDWcJ03//QAAAGxjYm9yo2lkYzpmb3JtYXRpaW1hZ2UvcG5namluc3RhbmNlSUR4LHhtcDppaWQ6NDFlODM1ZTAtMjlmYS00ZGQ3LThiYmYtOWVmNDMyOGMyMTY3bHJlbGF0aW9uc2hpcGhwYXJlbnRPZgAAAeJqdW1iAAAAQWp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuYWN0aW9ucy52MgAAAAAYYzJzaHRyfQrxSS79LBAyMI0m1H8AAAGZY2JvcqJnYWN0aW9uc4KiZmFjdGlvbmtjMnBhLm9wZW5lZGpwYXJhbWV0ZXJzoWtpbmdyZWRpZW50c4GiY3VybHgtc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5pbmdyZWRpZW50LnYzZGhhc2hYIKIQ0DnAbov7sBJH5X0V6gkr7XSAlZYscHYeqDnKrWfCpGZhY3Rpb254HWNvbS5hbnRocm9waWMuY2xhdWRlLnByb3ZpZGVkanBhcmFtZXRlcnOheB9jb20uYW50aHJvcGljLm9yaWdpbi1jb25maWRlbmNlZ3Vua25vd25rZGVzY3JpcHRpb254ZkNsYXVkZSBwcm92aWRlZCB0aGlzIGZpbGUgYXQgdGhlIHJlcXVlc3Qgb2YgYSB1c2VyIGFuZCBtYXkgaGF2ZSBjcmVhdGVkIG9yIG1vZGlmaWVkIHRoZSBmaWxlIGNvbnRlbnRzLm1zb2Z0d2FyZUFnZW50oWRuYW1lZkNsYXVkZXJhbGxBY3Rpb25zSW5jbHVkZWT1AAAAyGp1bWIAAABAanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5oYXNoLmRhdGEAAAAAGGMyc2hPmU8qcpViq6F1nInIKWUoAAAAgGNib3KlY2FsZ2ZzaGEyNTZjcGFkTQAAAAAAAAAAAAAAAABkaGFzaFggz2hVqV3uRRjVbWEOIaQ2IemNuP4Q5KvMFsEacoPIoXBkbmFtZW5qdW1iZiBtYW5pZmVzdGpleGNsdXNpb25zgaJlc3RhcnQYIWZsZW5ndGgZFooAAAI+anVtYgAAACdqdW1kYzJjbAARABCAAACqADibcQNjMnBhLmNsYWltLnYyAAAAAg9jYm9ypWNhbGdmc2hhMjU2aXNpZ25hdHVyZXhNc2VsZiNqdW1iZj0vYzJwYS91cm46YzJwYTplZWU1OTI0Mi0yZDE5LTRkNjQtOWE4My0zODM1MmVmOTc2MTIvYzJwYS5zaWduYXR1cmVqaW5zdGFuY2VJRHgseG1wOmlpZDoxZmJlM2ZlNC1jZGZiLTQwNjgtOWU5Zi03ZGVmMTU0NWZhYjdyY3JlYXRlZF9hc3NlcnRpb25zg6JjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggohDQOcBui/uwEkflfRXqCSvtdICVlixwdh6oOcqtZ8KiY3VybHgqc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5hY3Rpb25zLnYyZGhhc2hYIDK73yjoxIZnRQ9WUcMcLKlqgvEKnMGDlWeeJCczb8z3omN1cmx4KXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaGFzaC5kYXRhZGhhc2hYICzKrH8W14tHPAZylF1vOiX8sD6BSJT1vyhTzDAVslE7dGNsYWltX2dlbmVyYXRvcl9pbmZvo2RuYW1lb0FudGhyb3BpYyBGaWxlc2d2ZXJzaW9uZTEuMC4wa3NwZWNWZXJzaW9uZTIuNC4wAAAQOGp1bWIAAAAoanVtZGMyY3MAEQAQgAAAqgA4m3EDYzJwYS5zaWduYXR1cmUAAAAQCGNib3LShFkCEqIBJhghWQIKMIICBjCCAY2gAwIBAgIUQOWgCu7COdC+uIP6BkIFPWdVEwAwCgYIKoZIzj0EAwMwSTEXMBUGA1UEChMOQW50aHJvcGljLCBQQkMxLjAsBgNVBAMTJUFudGhyb3BpYyBDb250ZW50IENyZWRlbnRpYWxzIFJvb3QgQ0EwHhcNMjYwODA3MTg0MzU2WhcNMjgwODA2MTk0MzU2WjBEMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEpMCcGA1UEAxMgQW50aHJvcGljIENsYXVkZSBDb250ZW50IFNpZ25pbmcwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASYegpry1AYBRTVNL1CpTlbROnY3dey+UrsF9C3phYrATN3ZHf93Mo8RQN0KOUuOn19P4oWNFWe5n2/She9N7eTo1gwVjAOBgNVHQ8BAf8EBAMCB4AwFQYDVR0lBA4wDAYKKwYBBAGD6F4CATAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFM5R4gSBTmRbI/jjxM+aPpzB11zCMAoGCCqGSM49BAMDA2cAMGQCMDFzHRSeAXrSy1WOzkbhPZ6Km2wGTmZ/2gK18k8BQGXyqz88Rdrz6CTX9flAnYNVxgIwcF9c3fVhqmJKpi+UhasNUMko69cyX6STPfta3Q8EjyzDjzoyrol46FP6VFHhvUcJoWNwYWRZDZ4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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"), icon(512, "iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAIAAAB7GkOtAAAWfmNhQlgAABZ+anVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQNjMnBhAAAAFlhqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3VybjpjMnBhOmEzMzYxYjFkLTIzNzQtNDg5YS05Zjc3LWJjMzU1NzVlOWZmMQAAAAOTanVtYgAAAClqdW1kYzJhcwARABCAAACqADibcQNjMnBhLmFzc2VydGlvbnMAAAAAuGp1bWIAAABEanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5pbmdyZWRpZW50LnYzAAAAABhjMnNorWV7uFc6YDs2fdwIFJSEqQAAAGxjYm9yo2lkYzpmb3JtYXRpaW1hZ2UvcG5namluc3RhbmNlSUR4LHhtcDppaWQ6ZDhjNDM0ZmItODYwNi00MjhkLWI2NDctYzkxNTNiMzFjZWJjbHJlbGF0aW9uc2hpcGhwYXJlbnRPZgAAAeJqdW1iAAAAQWp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuYWN0aW9ucy52MgAAAAAYYzJzaApBM22klIqaXCwyxWOT2EwAAAGZY2JvcqJnYWN0aW9uc4KiZmFjdGlvbmtjMnBhLm9wZW5lZGpwYXJhbWV0ZXJzoWtpbmdyZWRpZW50c4GiY3VybHgtc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5pbmdyZWRpZW50LnYzZGhhc2hYICd0MgOASw9EH+PSQdwhrgYHq3Cxxyn3SkZqWqh1aIuVpGZhY3Rpb254HWNvbS5hbnRocm9waWMuY2xhdWRlLnByb3ZpZGVkanBhcmFtZXRlcnOheB9jb20uYW50aHJvcGljLm9yaWdpbi1jb25maWRlbmNlZ3Vua25vd25rZGVzY3JpcHRpb254ZkNsYXVkZSBwcm92aWRlZCB0aGlzIGZpbGUgYXQgdGhlIHJlcXVlc3Qgb2YgYSB1c2VyIGFuZCBtYXkgaGF2ZSBjcmVhdGVkIG9yIG1vZGlmaWVkIHRoZSBmaWxlIGNvbnRlbnRzLm1zb2Z0d2FyZUFnZW50oWRuYW1lZkNsYXVkZXJhbGxBY3Rpb25zSW5jbHVkZWT1AAAAyGp1bWIAAABAanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5oYXNoLmRhdGEAAAAAGGMyc2jTKWX0MS/g4WRnQ4JLhewNAAAAgGNib3KlY2FsZ2ZzaGEyNTZjcGFkTQAAAAAAAAAAAAAAAABkaGFzaFggEXEUa16mRDKGUZMO+eW2WMgncO4/qsUfHIvhNghwNh9kbmFtZW5qdW1iZiBtYW5pZmVzdGpleGNsdXNpb25zgaJlc3RhcnQYIWZsZW5ndGgZFooAAAI+anVtYgAAACdqdW1kYzJjbAARABCAAACqADibcQNjMnBhLmNsYWltLnYyAAAAAg9jYm9ypWNhbGdmc2hhMjU2aXNpZ25hdHVyZXhNc2VsZiNqdW1iZj0vYzJwYS91cm46YzJwYTphMzM2MWIxZC0yMzc0LTQ4OWEtOWY3Ny1iYzM1NTc1ZTlmZjEvYzJwYS5zaWduYXR1cmVqaW5zdGFuY2VJRHgseG1wOmlpZDo3NDQzMjFjOC0xYTY5LTQzNzYtYjk4ZC1kMjdkNjZiOTc3M2ZyY3JlYXRlZF9hc3NlcnRpb25zg6JjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggJ3QyA4BLD0Qf49JB3CGuBgercLHHKfdKRmpaqHVoi5WiY3VybHgqc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5hY3Rpb25zLnYyZGhhc2hYIPQzpjbtxRepz6LbM73W6uIulSbtvlBqO0iFZQqCHn9momN1cmx4KXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaGFzaC5kYXRhZGhhc2hYIEdZVpG9dm245EkbldPFssN3gkVpUkAawF9/7Ftlj3iXdGNsYWltX2dlbmVyYXRvcl9pbmZvo2RuYW1lb0FudGhyb3BpYyBGaWxlc2d2ZXJzaW9uZTEuMC4wa3NwZWNWZXJzaW9uZTIuNC4wAAAQOGp1bWIAAAAoanVtZGMyY3MAEQAQgAAAqgA4m3EDYzJwYS5zaWduYXR1cmUAAAAQCGNib3LShFkCEqIBJhghWQIKMIICBjCCAY2gAwIBAgIUQOWgCu7COdC+uIP6BkIFPWdVEwAwCgYIKoZIzj0EAwMwSTEXMBUGA1UEChMOQW50aHJvcGljLCBQQkMxLjAsBgNVBAMTJUFudGhyb3BpYyBDb250ZW50IENyZWRlbnRpYWxzIFJvb3QgQ0EwHhcNMjYwODA3MTg0MzU2WhcNMjgwODA2MTk0MzU2WjBEMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEpMCcGA1UEAxMgQW50aHJvcGljIENsYXVkZSBDb250ZW50IFNpZ25pbmcwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASYegpry1AYBRTVNL1CpTlbROnY3dey+UrsF9C3phYrATN3ZHf93Mo8RQN0KOUuOn19P4oWNFWe5n2/She9N7eTo1gwVjAOBgNVHQ8BAf8EBAMCB4AwFQYDVR0lBA4wDAYKKwYBBAGD6F4CATAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFM5R4gSBTmRbI/jjxM+aPpzB11zCMAoGCCqGSM49BAMDA2cAMGQCMDFzHRSeAXrSy1WOzkbhPZ6Km2wGTmZ/2gK18k8BQGXyqz88Rdrz6CTX9flAnYNVxgIwcF9c3fVhqmJKpi+UhasNUMko69cyX6STPfta3Q8EjyzDjzoyrol46FP6VFHhvUcJoWNwYWRZDZ4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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")]};
+        $("mf").href = URL.createObjectURL(new Blob([JSON.stringify(m)], {type:"application/manifest+json"}));
+    } catch (e) {}
+})();
+
+/* ---------- Emergency & essentials ---------- */
+function toggleSOS(){ const el=$("sos"); el.hidden=!el.hidden; if(!el.hidden) renderSOS(); }
+function cleanNum(v){ return String(v).replace(/[^\d+*#]/g,"").slice(0,20); }
+function renderSOS(){
+    const em=S.emNum||"112", c=S.contact||"";
+    $("callEm").href="tel:"+em; $("callEm").textContent="📞 Call emergency number ("+em+")";
+    $("callContact").hidden=$("smsContact").hidden=!c;
+    if(c){ $("callContact").href="tel:"+c; $("smsContact").href="sms:"+c; }
+    $("emNum").value=S.emNum||""; $("contactNum").value=c;
+}
+function saveNumbers(){
+    const e=cleanNum($("emNum").value), c=cleanNum($("contactNum").value);
+    if(e) S.emNum=e; else delete S.emNum;
+    if(c) S.contact=c; else delete S.contact;
+    saveData(); renderSOS(); toast("Saved on this device only");
+}
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") $("sos").hidden=true; });
+
+/* ---------- Daily challenge ---------- */
+const CHALLENGES = [
+    ["Finish one 25-minute focus session on your hardest subject.", "Hint: Smart Focus above can time it for you."],
+    ["Write 3 flashcards for something you studied this week.", "Hint: put the question on one side and the answer on the other."],
+    ["Solve 2 practice problems without looking at your notes.", "Hint: check your answers after, and note any you missed."],
+    ["Explain one concept out loud in 2 minutes, as if teaching a friend.", "Hint: if you get stuck, that is the gap to study next."],
+    ["Review yesterday's notes for 10 minutes.", "Hint: re-read, then close the notes and write what you remember."],
+    ["Plan your top 3 goals for tomorrow.", "Hint: make each goal small enough to finish in one sitting."],
+    ["Take a 10-minute walk, then complete one small task.", "Hint: rest is part of studying well."]
+];
+function dayIndex() { const d = new Date(); return Math.floor(new Date(d.getFullYear(), d.getMonth(), d.getDate()) / 864e5) % CHALLENGES.length; }
+function renderChallenge() {
+    const c = CHALLENGES[dayIndex()];
+    $("challengeText").textContent = c[0]; $("challengeHint").textContent = c[1];
+    const done = S.challengeDone === today();
+    $("challengeBtn").disabled = done;
+    $("challengeBtn").textContent = done ? "Completed today ✓" : "Mark challenge done (+25 XP)";
+}
+function completeChallenge() {
+    if (S.challengeDone === today()) return;
+    S.challengeDone = today(); S.challengeCount++;
+    renderChallenge(); addXP(25, "daily challenge");
+}
+
+/* ---------- Quiz with solutions ---------- */
+const BANK = [
+    {q:"Which C function prints formatted text to the screen?", o:["scanf","printf","malloc","return"], a:1, e:"printf() writes formatted output. scanf() reads input, malloc() allocates memory."},
+    {q:"What does int x = 5 / 2; store in x in C?", o:["2.5","3","2","0"], a:2, e:"Both operands are integers, so C uses integer division and drops the fraction: 5 / 2 = 2."},
+    {q:"In C, the first element of an array has which index?", o:["0","1","-1","It depends"], a:0, e:"C arrays are zero-indexed. arr[0] is the first element."},
+    {q:"Which operator checks equality in C?", o:["=","==","=>","!="], a:1, e:"== compares values. A single = assigns a value."},
+    {q:"Which loop always runs its body at least once?", o:["for","while","do-while","if"], a:2, e:"do-while checks its condition after the body, so the body runs once before the first check."},
+    {q:"What does strlen(\"study\") return?", o:["4","5","6","It depends"], a:1, e:"\"study\" has 5 characters. strlen() does not count the null terminator."},
+    {q:"What is active recall?", o:["Re-reading notes","Highlighting text","Testing yourself without looking","Listening to music"], a:2, e:"Retrieving information from memory strengthens it far more than passive re-reading."},
+    {q:"What is spaced repetition?", o:["Cramming the night before","Reviewing at increasing intervals","Studying one topic all day","Reading once"], a:1, e:"Reviewing just as you begin to forget, with longer gaps each time, builds long-term memory."},
+    {q:"In the Pomodoro technique, a typical work block is?", o:["5 minutes","25 minutes","90 minutes","3 hours"], a:1, e:"Pomodoro uses about 25 minutes of focus followed by a short break of around 5 minutes."},
+    {q:"Which habit best helps memory consolidation?", o:["All-nighters","Good sleep","Extra caffeine","Skipping meals"], a:1, e:"Sleep is when the brain consolidates what you learned during the day."}
+];
+let QZ = null;
+function startQuiz() {
+    const pool = BANK.slice().sort(() => Math.random() - .5).slice(0, 5);
+    QZ = {pool, i:0, score:0, answered:false};
+    showQ();
+}
+function showQ() {
+    const box = $("quizBox"); box.innerHTML = "";
+    const q = QZ.pool[QZ.i]; QZ.answered = false;
+    const head = document.createElement("p"); head.innerHTML = "<small>Question " + (QZ.i+1) + " of " + QZ.pool.length + "</small>";
+    const text = document.createElement("p"); text.innerHTML = "<strong></strong>"; text.firstChild.textContent = q.q;
+    box.append(head, text);
+    const btns = q.o.map((opt, idx) => {
+        const b = document.createElement("button"); b.className = "opt"; b.textContent = opt;
+        b.addEventListener("click", () => answerQ(idx, btns, q)); box.appendChild(b); return b;
+    });
+    const sol = document.createElement("div"); sol.id = "sol"; box.appendChild(sol);
+}
+function answerQ(idx, btns, q) {
+    if (QZ.answered) return; QZ.answered = true;
+    btns.forEach((b, i) => { b.disabled = true; if (i === q.a) b.classList.add("right"); else if (i === idx) b.classList.add("wrong"); });
+    if (idx === q.a) QZ.score++;
+    const sol = $("sol"); sol.className = "solution";
+    sol.textContent = (idx === q.a ? "✅ Correct. " : "❌ Not quite. ") + "Solution: " + q.e;
+    const next = document.createElement("button");
+    next.textContent = QZ.i + 1 < QZ.pool.length ? "Next question" : "See results";
+    next.addEventListener("click", () => { QZ.i++; QZ.i < QZ.pool.length ? showQ() : endQuiz(); });
+    $("quizBox").appendChild(next);
+}
+function endQuiz() {
+    const n = QZ.pool.length, sc = QZ.score, perfect = sc === n;
+    S.quizTaken++; wkBump("quiz"); if (perfect) S.perfect++;
+    S.quizBest = Math.max(S.quizBest || 0, sc);
+    const box = $("quizBox"); box.innerHTML = "";
+    const p = document.createElement("p");
+    p.textContent = "You scored " + sc + " / " + n + ". " + (perfect ? "Perfect! 🏆" : sc >= 3 ? "Nice work!" : "Every attempt helps. Review the solutions and try again.");
+    const b = document.createElement("button"); b.textContent = "Play again"; b.addEventListener("click", startQuiz);
+    box.append(p, b);
+    addXP(sc * 5 + (perfect ? 10 : 0), "quiz");
+    quizStats();
+}
+function quizStats() {
+    const el = $("quizStats"); if (el) el.textContent = S.quizTaken ? "Quizzes taken: " + S.quizTaken + " · Best score: " + (S.quizBest || 0) + "/5" : "";
+}
+
+/* ---------- Reset ---------- */
+function resetAll() {
+    if (!confirm("Delete all goals, sessions, XP and badges? This cannot be undone.")) return;
+    S = Object.assign({}, DEF, {goals:[], schedule:[], badges:[], notified:{}, syl:[], exams:[]});
+    saveData(); renderAll(); toast("All data cleared");
+}
+
+function renderAll() { renderGoals(); renderSchedule(); renderChallenge(); renderBadges(); renderHud(); quizStats(); fillTasks(); renderSyl(); renderExams(); applyUI(); $("notifMode").value = S.nmode || "off"; notifStatus(); }
+fillDays(); renderAll(); sessionReminders();
+document.querySelectorAll("input[placeholder]:not([aria-label])").forEach(i => i.setAttribute("aria-label", i.placeholder));
+</script>
+
+</body>
+</html>
